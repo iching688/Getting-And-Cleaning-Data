@@ -1,10 +1,8 @@
-## download data file and unzip it if the file deosn't exist
-if (!file.exists("./activity.zip")) {
-        fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-        download.file(fileURL, dest="./activity.zip")
-        unzip("./activity.zip")
-        dateDownloaded <- date()
-}
+## download data file and unzip it
+fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(fileURL, dest="./activity.zip")
+unzip("./activity.zip")
+dateDownloaded <- date()
 
 library(data.table)
 library(dplyr)
